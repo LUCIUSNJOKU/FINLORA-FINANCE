@@ -1,0 +1,111 @@
+{
+  "default_threshold": [
+    {
+      "model": "1. Logistic Regression (balanced)",
+      "precision": 0.3815,
+      "recall": 0.7995,
+      "f1": 0.5166,
+      "roc_auc": 0.934
+    },
+    {
+      "model": "2. Random Forest (balanced_subsample)",
+      "precision": 0.3113,
+      "recall": 0.8246,
+      "f1": 0.4519,
+      "roc_auc": 0.9319
+    },
+    {
+      "model": "3. Random Forest (tuned: {'min_samples_leaf': 5, 'max_depth': 14})",
+      "precision": 0.3592,
+      "recall": 0.8174,
+      "f1": 0.4991,
+      "roc_auc": 0.9313
+    },
+    {
+      "model": "4. HistGradientBoosting (balanced)",
+      "precision": 0.2922,
+      "recall": 0.8401,
+      "f1": 0.4336,
+      "roc_auc": 0.9293
+    },
+    {
+      "model": "5. Random Forest + SMOTE (0.3 ratio)",
+      "precision": 0.4953,
+      "recall": 0.7506,
+      "f1": 0.5968,
+      "roc_auc": 0.9329
+    },
+    {
+      "model": "6. Ensemble (LR + RF tuned, soft voting)",
+      "precision": 0.3992,
+      "recall": 0.8031,
+      "f1": 0.5333,
+      "roc_auc": 0.9377
+    },
+    {
+      "model": "7. RF (tuned) + isotonic calibration",
+      "precision": 0.7353,
+      "recall": 0.5668,
+      "f1": 0.6402,
+      "roc_auc": 0.9312
+    }
+  ],
+  "threshold_tuned": [
+    {
+      "model": "1. Logistic Regression (balanced)",
+      "best_threshold": 0.935,
+      "precision": 0.8148,
+      "recall": 0.6301,
+      "f1": 0.7106,
+      "roc_auc": 0.934
+    },
+    {
+      "model": "2. Random Forest (balanced_subsample)",
+      "best_threshold": 0.765,
+      "precision": 0.5967,
+      "recall": 0.648,
+      "f1": 0.6213,
+      "roc_auc": 0.9319
+    },
+    {
+      "model": "3. Random Forest (tuned: {'min_samples_leaf': 5, 'max_depth': 14})",
+      "best_threshold": 0.77,
+      "precision": 0.6647,
+      "recall": 0.6671,
+      "f1": 0.6659,
+      "roc_auc": 0.9313
+    },
+    {
+      "model": "4. HistGradientBoosting (balanced)",
+      "best_threshold": 0.94,
+      "precision": 0.7964,
+      "recall": 0.6396,
+      "f1": 0.7095,
+      "roc_auc": 0.9293
+    },
+    {
+      "model": "5. Random Forest + SMOTE (0.3 ratio)",
+      "best_threshold": 0.7,
+      "precision": 0.746,
+      "recall": 0.5573,
+      "f1": 0.638,
+      "roc_auc": 0.9329
+    },
+    {
+      "model": "6. Ensemble (LR + RF tuned, soft voting)",
+      "best_threshold": 0.84,
+      "precision": 0.7608,
+      "recall": 0.6492,
+      "f1": 0.7006,
+      "roc_auc": 0.9377
+    },
+    {
+      "model": "7. RF (tuned) + isotonic calibration",
+      "best_threshold": 0.3,
+      "precision": 0.6615,
+      "recall": 0.6647,
+      "f1": 0.6631,
+      "roc_auc": 0.9312
+    }
+  ]
+}
