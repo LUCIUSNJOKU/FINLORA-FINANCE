@@ -37,11 +37,13 @@ st.set_page_config(page_title="Finlora Risk Review Queue", page_icon="🛡️", 
 # ----------------------------------------------------------------------------
 # Load model bundle + data
 # ----------------------------------------------------------------------------
-@st.cache_resource
 MODEL_PATH = Path(__file__).resolve().parent / "finlora_models.joblib"
 
+@st.cache_resource
 def load_bundle():
     return joblib.load(MODEL_PATH)
+
+bundle = load_bundle()
 
 @st.cache_data
 def load_data(path="C:\Users\User\Documents\AMDARI_IMS\Finlora_Finance_PJ\Streamlit_app\finlora_clean_transactions.csv"):
