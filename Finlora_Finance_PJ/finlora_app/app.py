@@ -28,7 +28,9 @@ registry, nav_spec = {}, {}
 for section_name, items in PAGES.items():
     nav_spec[section_name] = []
     for key, fn, title, icon in items:
-        pg = st.Page(fn, title=title, icon=icon, url_path=key, default=(key == "home"))
+        kw = {"default": True} if key == "home" else {"url_path": key}
+        pg = st.Page(fn, title=title, icon=icon, **kw)
+        # pg = st.Page(fn, title=title, icon=icon, url_path=key, default=(key == "home"))
         registry[key] = pg
         nav_spec[section_name].append(pg)
 st.session_state["_pages"] = registry
