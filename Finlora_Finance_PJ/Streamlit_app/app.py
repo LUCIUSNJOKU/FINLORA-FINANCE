@@ -38,10 +38,10 @@ st.set_page_config(page_title="Finlora Risk Review Queue", page_icon="🛡️", 
 # ----------------------------------------------------------------------------
 @st.cache_resource
 def load_bundle():
-    return joblib.load("finlora_models.joblib")
+    return joblib.load("C:\Users\User\Documents\AMDARI_IMS\Finlora_Finance_PJ\Streamlit_app\finlora_models.joblib")
 
 @st.cache_data
-def load_data(path="finlora_clean_transactions.csv"):
+def load_data(path="C:\Users\User\Documents\AMDARI_IMS\Finlora_Finance_PJ\Streamlit_app\finlora_clean_transactions.csv"):
     df = pd.read_csv(path)
     df["is_new_device"] = df["is_new_device"].fillna(0).astype(int)
     df["is_cross_border"] = df["is_cross_border"].astype(int)
