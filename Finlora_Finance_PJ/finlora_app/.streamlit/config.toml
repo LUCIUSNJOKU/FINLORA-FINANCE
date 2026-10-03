@@ -1,0 +1,19 @@
+[theme]
+base = "light"
+primaryColor = "#2A6FDB"
+backgroundColor = "#F6F4EF"
+secondaryBackgroundColor = "#ECE8DF"
+textColor = "#0B1B2B"
+
+[theme.sidebar]
+backgroundColor = "#0B1B2B"
+secondaryBackgroundColor = "#14283D"
+textColor = "#E8ECF1"
+primaryColor = "#F4A300"
+
+[server]
+maxUploadSize = 400
+runOnSave = false
+
+[browser]
+gatherUsageStats = false
