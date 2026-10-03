@@ -45,12 +45,17 @@ def load_bundle():
 
 bundle = load_bundle()
 
+
+DATA_PATH = Path(__file__).resolve().parent / "finlora_clean_transactions.csv"
+
 @st.cache_data
-def load_data(path="C:\Users\User\Documents\AMDARI_IMS\Finlora_Finance_PJ\Streamlit_app\finlora_clean_transactions.csv"):
+def load_data(path=DATA_PATH):
     df = pd.read_csv(path)
     df["is_new_device"] = df["is_new_device"].fillna(0).astype(int)
     df["is_cross_border"] = df["is_cross_border"].astype(int)
     return df
+
+df = load_data()   # call it outside the function
 
 bundle = load_bundle()
 NUM_FEATS = bundle["num_feats"]
