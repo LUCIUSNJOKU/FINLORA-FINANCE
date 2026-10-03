@@ -30,6 +30,7 @@ import pandas as pd
 import joblib
 import streamlit as st
 import altair as alt
+from pathlib import Path
 
 st.set_page_config(page_title="Finlora Risk Review Queue", page_icon="🛡️", layout="wide")
 
@@ -37,8 +38,10 @@ st.set_page_config(page_title="Finlora Risk Review Queue", page_icon="🛡️", 
 # Load model bundle + data
 # ----------------------------------------------------------------------------
 @st.cache_resource
+MODEL_PATH = Path(__file__).resolve().parent / "finlora_models.joblib"
+
 def load_bundle():
-    return joblib.load("C:\Users\User\Documents\AMDARI_IMS\Finlora_Finance_PJ\Streamlit_app\finlora_models.joblib")
+    return joblib.load(MODEL_PATH)
 
 @st.cache_data
 def load_data(path="C:\Users\User\Documents\AMDARI_IMS\Finlora_Finance_PJ\Streamlit_app\finlora_clean_transactions.csv"):
