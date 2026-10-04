@@ -1,0 +1,53 @@
+{
+    "categorical_features": [
+        "account_type",
+        "kyc_tier",
+        "merchant_category",
+        "channel"
+    ],
+    "numeric_features": [
+        "amount_to_avg_ratio",
+        "transaction_velocity_1h",
+        "is_new_device",
+        "is_cross_border",
+        "account_age_days",
+        "hour_of_day",
+        "is_refund"
+    ],
+    "feature_columns": [
+        "amount_to_avg_ratio",
+        "transaction_velocity_1h",
+        "is_new_device",
+        "is_cross_border",
+        "account_age_days",
+        "hour_of_day",
+        "is_refund",
+        "account_type_Business",
+        "account_type_Individual",
+        "kyc_tier_Tier1_Basic",
+        "kyc_tier_Tier2_Verified",
+        "kyc_tier_Tier3_Enhanced",
+        "merchant_category_ATM Withdrawal",
+        "merchant_category_Crypto Exchange",
+        "merchant_category_Electronics",
+        "merchant_category_Gambling/Gaming",
+        "merchant_category_Groceries",
+        "merchant_category_Healthcare",
+        "merchant_category_Insurance",
+        "merchant_category_P2P Transfer",
+        "merchant_category_Payroll Transfer",
+        "merchant_category_Restaurants",
+        "merchant_category_Retail",
+        "merchant_category_Subscription/SaaS",
+        "merchant_category_Travel",
+        "merchant_category_Utilities",
+        "merchant_category_Wire Transfer",
+        "channel_API/Integration",
+        "channel_Card Not Present",
+        "channel_Card Present",
+        "channel_Mobile App",
+        "channel_USSD",
+        "channel_Web Dashboard"
+    ],
+    "target_column": "is_fraud"
+}
